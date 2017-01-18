@@ -16,22 +16,22 @@ angular.module('App', [])
 		return shuffled;
 	};
 
-	// MOVE CHOICE FROM CHOICES TO FRUITS
+	// MOVE FROM CHOICES TO FRUITS
 	$scope.choicesToFruits = function(index) {
 		$scope.fruits.push($scope.choices.splice(index, 1)[0]);
 	};
 
-	// MOVE CHOICE FROM FRUITS TO CHOICES
+	// MOVE FROM FRUITS TO CHOICES
 	$scope.fruitsToChoices = function(index) {
 		$scope.choices.push($scope.fruits.splice(index, 1)[0]);
 	};
 
-	// MOVE CHOICE FROM CHOICES TO VEGETABLES
+	// MOVE FROM CHOICES TO VEGETABLES
 	$scope.choicesToVegetables = function(index) {
 		$scope.vegetables.push($scope.choices.splice(index, 1)[0]);
 	};
 
-	// MOVE CHOICE FROM VEGETABLES TO CHOICES
+	// MOVE FROM VEGETABLES TO CHOICES
 	$scope.vegetablesToChoices = function(index) {
 		$scope.choices.push($scope.vegetables.splice(index, 1)[0]);
 	};
