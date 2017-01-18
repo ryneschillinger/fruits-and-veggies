@@ -41,3 +41,11 @@ hr {
 	height: 1px;
 	margin: 25px 0;
 }
+
+.winner {
+	color: #5CB85C;
+}
+
+.loser {
+	color: #D9534F;
+}
