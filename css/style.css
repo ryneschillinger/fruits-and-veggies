@@ -1,5 +1,43 @@
 /* file for your css */
 
+h1 {
+	font-size: 40px;
+	font-weight: 700;
+}
+
+h3 {
+	font-weight: 600;
+}
+
+h4 {
+	font-weight: 400;
+}
+
+span {
+	font-weight: 600;
+	font-size: 15px;
+	margin: 0px 14px;
+}
+
+.fa-cutlery {
+	font-size: 82%;
+	margin-right: 5px;
+}
+
+.btn {
+	padding: 8px 12px;
+}
+
 .btn:focus {
 	outline: none;
+}
+
+hr {
+	border: 0;
+	clear: both;
+	display: block;
+	width: 100%;               
+	background-color: #E3E3E3;
+	height: 1px;
+	margin: 25px 0;
 }

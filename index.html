@@ -14,37 +14,50 @@
 
         <div class="container" ng-controller="AppController">
 
-            <h1>Fruit and Veggies</h1>
-            <p>Move each fruit and vegetable from the choices to their respective column</p>
+            <h1>
+                <i class="fa fa-cutlery" aria-hidden="true"></i>
+                Fruit and Veggies
+            </h1>
             <hr>
-            <h3 ng-show="choices.length>0">{{choices.length}} fruits/vegetables left to move</h3>
-            <h3 ng-show="choices.length===0 && allCorrect()">Nailed it!</h3>
-            <h3 ng-show="choices.length===0 && !allCorrect()">Nope.</h3>
+            <h4 ng-show="choices.length>0"><strong>{{choices.length}}</strong> fruits/veggies remaining</h4>
+            <h3 ng-show="choices.length == 0 && allCorrect()">Nailed it!</h3>
+            <h3 ng-show="choices.length == 0 && !allCorrect()">Nope.</h3>
             <hr>
 
             <div class="row">
 
                 <div class="col-sm-4">
                     <h3>Fruits</h3>
-                    <div class="well" ng-repeat="fruit in fruits track by $index" ng-class="{'wrong': choices.length===0 && !inFruits($index)}">
+                    <hr>
+                    <div class="well" ng-repeat="fruit in fruits track by $index" ng-class="{'wrong': choices.length == 0 && !inFruits($index)}">
                         <span>{{fruit}}</span>
-                        <button class="btn btn-default" ng-click="fruitsToChoices($index)"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                        <button class="btn btn-default" ng-click="fruitsToChoices($index)">
+                            <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                        </button>
                     </div>
                 </div>
 
                 <div class="col-sm-4">
                     <h3>Choices</h3>
+                    <hr>
                     <div class="well" ng-repeat="choice in choices track by $index">
-                        <button class="btn btn-default" ng-click="choicesToFruits($index)"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
+                        <button class="btn btn-default" ng-click="choicesToFruits($index)">
+                            <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                        </button>
                         <span>{{choice}}</span>
-                        <button class="btn btn-default" ng-click="choicesToVegetables($index)"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                        <button class="btn btn-default" ng-click="choicesToVegetables($index)">
+                            <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                        </button>
                     </div>
                 </div>
 
                 <div class="col-sm-4">
                     <h3>Veggies</h3>
-                    <div class="well" ng-repeat="vegetable in vegetables track by $index" ng-class="{'wrong': choices.length===0 && !inVegetables($index)}">
-                        <button class="btn btn-default" ng-click="vegetablesToChoices($index)"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
+                    <hr>
+                    <div class="well" ng-repeat="vegetable in vegetables track by $index" ng-class="{'wrong': choices.length == 0 && !inVegetables($index)}">
+                        <button class="btn btn-default" ng-click="vegetablesToChoices($index)">
+                            <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                        </button>
                         <span>{{vegetable}}</span>
                     </div>
                 </div>
